@@ -16,7 +16,9 @@ export const choosePattern = (where, color, rotate = 45) => {
       background: `repeating-linear-gradient( ${rotate}deg, ${color} , ${color} 2px, transparent 2px, transparent 10px)`,
     },
     gradient: {
-      opacity: 0.8,
+      ackgroundRepeat: 'repeat',
+      backgroundSize: '100% 100%',
+      opacity: 0.5,
       backgroundImage: `linear-gradient(180deg, ${color} 0%, rgba(8,19,35,0) 100%)`,
     },
   }

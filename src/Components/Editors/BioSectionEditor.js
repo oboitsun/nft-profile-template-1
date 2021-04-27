@@ -39,12 +39,13 @@ export default class BioSectionEditor extends Component {
           />
         </div>
 
-        {/* <div className='w-32 h-1/2'>
+        <div className='w-32 h-1/2'>
           <ColorPicker
             name='Border Color'
             keyProp='borderColor'
-            color={state.bioSection.borderColor}
-            {...sectionProps}
+            color={state.authorSection.borderColor}
+            where='authorSection'
+            function={changeSectionProp}
           />
         </div>
         <div className='flex flex-col'>
@@ -53,15 +54,15 @@ export default class BioSectionEditor extends Component {
             id='borderWidth'
             className='rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128 mt-1'
             onChange={(event) => {
-              changeSectionProp('bioSection', 'borderWidth', event.target.value)
+              changeSectionProp('authorSection', 'borderWidth', parseInt(event.target.value))
             }}
-            defaultValue={state.bioSection.borderWidth}
+            defaultValue={state.authorSection.borderWidth}
             step='2'
             type='range'
             min='0'
-            max='4'
+            max='8'
           />
-        </div> */}
+        </div>
       </div>
     )
   }

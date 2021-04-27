@@ -23,15 +23,14 @@ export default class Author extends Component {
         onClick={() => {
           showEditor('authorSection')
         }}
-        className='w-full h-full flex items-center text-lg relative z-20 text-barlow p-8  rounded-t-2xl '>
+        className='w-full h-full flex items-center text-lg relative z-20 text-barlow p-8'>
         {editMode && (
-          <div
-            className={`edit absolute top-0 left-0  w-full h-full ${hover}  rounded-t-2xl  z-30`}></div>
+          <div className={`edit absolute top-0 left-0  w-full h-full ${hover} z-30`}></div>
         )}
 
         <div
           style={{ ...headerPattern }}
-          className={`absolute top-0 left-0 h-full w-full rounded-t-2xl  z-10`}></div>
+          className={`absolute top-0 left-0 h-full w-full  z-10`}></div>
         <span className='w-24 h-24 rounded-full bg-blue-300 mr-1 xl:mr-5 2xl:mr-8 z-10'></span>
         <div className='flex flex-col z-10'>
           <span className='text-base'>#0x8c5dfaacc64a2...53eb</span>

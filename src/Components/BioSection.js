@@ -23,10 +23,9 @@ export default class BioSection extends Component {
             showEditor('bioSection')
           }
         }}
-        className='p-5 relative z-10 overflow-hidden rounded-b-2xl'>
+        className='p-5 relative z-10 overflow-hidden '>
         {editMode && (
-          <div
-            className={`bio follow absolute top-0 left-0  w-full h-full ${hover} rounded-b-2xl   z-10`}></div>
+          <div className={`bio follow absolute top-0 left-0  w-full h-full ${hover}   z-10`}></div>
         )}
 
         <div
