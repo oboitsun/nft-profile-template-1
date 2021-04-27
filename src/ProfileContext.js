@@ -45,13 +45,21 @@ class ProfileProvider extends Component {
       pattern: 'flat',
       patternColor: 'white',
     },
-    offersSection: {
+    nftCurrent: {
+      edit: false,
+      bckColor: 'red',
+      pattern: 'flat',
+      patternColor: 'white',
+      borderWidth: 2,
+      borderColor: 'black',
+    },
+    nftPast: {
       edit: false,
       bckColor: 'red',
       borderWidth: 2,
-      borderColor: 'white',
       pattern: 'flat',
       patternColor: 'white',
+      borderColor: 'black',
     },
   }
 

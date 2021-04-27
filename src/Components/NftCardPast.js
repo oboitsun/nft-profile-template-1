@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Favorites from './Favorites'
 import ProfileContext from '../ProfileContext'
 import { choosePattern } from './patternLibrary'
-export default class NftCard extends Component {
+export default class NftCardPast extends Component {
   static contextType = ProfileContext
 
   render() {
@@ -12,12 +12,12 @@ export default class NftCard extends Component {
       showEditor,
     } = this.context
     const hover = editMode ? 'hover:bg-gray-500 hover:bg-opacity-40 cursor cursor-pointer' : ``
-    const headerPattern = choosePattern(state.nftCurrent.pattern, state.nftCurrent.patternColor)
+    const headerPattern = choosePattern(state.nftPast.pattern, state.nftPast.patternColor)
     return (
       <div
         style={{
-          background: `${state.nftCurrent.bckColor}`,
-          border: `${state.nftCurrent.borderWidth}px solid ${state.nftCurrent.borderColor}`,
+          background: `${state.nftPast.bckColor}`,
+          border: `${state.nftPast.borderWidth}px solid ${state.nftPast.borderColor}`,
         }}
         className='w-full h-full flex flex-col bg-white rounded-xl px-3 py-4 font-barlow relative z-10 overflow-hidden'>
         <div

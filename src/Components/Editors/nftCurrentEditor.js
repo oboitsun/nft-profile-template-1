@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import ColorPicker from '../ColorPicker'
 import ProfileContext from '../../ProfileContext'
 import PatternPicker from '../PatternPicker'
-export default class OffersSectionEditor extends Component {
+export default class NftCurrentEditor extends Component {
   static contextType = ProfileContext
   render() {
     const { state, changeSectionProp } = this.context
     const sectionProps = {
-      where: 'offersSection',
+      where: 'nftCurrent',
       function: changeSectionProp,
     }
 
@@ -17,7 +17,7 @@ export default class OffersSectionEditor extends Component {
           <ColorPicker
             name='Main Background'
             keyProp='bckColor'
-            color={state.offersSection.bckColor}
+            color={state.nftCurrent.bckColor}
             {...sectionProps}
           />
         </div>
@@ -25,7 +25,7 @@ export default class OffersSectionEditor extends Component {
         <div className='mr-2'>
           <h3 className='mb-1'>Pattern:</h3>
           <PatternPicker
-            color={state.offersSection.patternColor}
+            color={state.nftCurrent.patternColor}
             keyProp='pattern'
             {...sectionProps}
           />
@@ -34,7 +34,7 @@ export default class OffersSectionEditor extends Component {
           <ColorPicker
             name='Pattern Color'
             keyProp='patternColor'
-            color={state.offersSection.patternColor}
+            color={state.nftCurrent.patternColor}
             {...sectionProps}
           />
         </div>
@@ -43,24 +43,8 @@ export default class OffersSectionEditor extends Component {
           <ColorPicker
             name='Border Color'
             keyProp='borderColor'
-            color={state.authorSection.borderColor}
-            where='authorSection'
-            function={changeSectionProp}
-          />
-        </div>
-        <div className='flex flex-col'>
-          <label htmlFor='borderWidth'>Border Width:</label>
-          <input
-            id='borderWidth'
-            className='rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128 mt-1'
-            onChange={(event) => {
-              changeSectionProp('authorSection', 'borderWidth', parseInt(event.target.value))
-            }}
-            defaultValue={state.authorSection.borderWidth}
-            step='2'
-            type='range'
-            min='0'
-            max='8'
+            color={state.nftCurrent.borderColor}
+            {...sectionProps}
           />
         </div>
       </div>

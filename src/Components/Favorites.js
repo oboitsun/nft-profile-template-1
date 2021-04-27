@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Like from './Icons/Like'
-import Star from './Icons/Star'
 
 export default class Favorites extends Component {
   render() {

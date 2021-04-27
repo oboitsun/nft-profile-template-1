@@ -8,7 +8,6 @@ export default class Header extends Component {
   render() {
     const {
       state: { editMode },
-      showEditor,
     } = this.context
     return (
       <div className='h-28 w-full flex flex-col justify-between  bg-gray-900 '>
